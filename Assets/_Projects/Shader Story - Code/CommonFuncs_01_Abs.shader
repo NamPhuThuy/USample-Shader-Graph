@@ -1,5 +1,5 @@
 
-Shader "DecompiledArt/CommonFunctions/Abs/Abs"
+Shader "NamPhuThuy/CommonFuncs/Abs"
 {
     Properties
     {
