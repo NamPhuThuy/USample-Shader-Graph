@@ -58,17 +58,14 @@
 
 This is the short description about the project. Technologies, tools be used 
  :smile:
+ https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-Major frameworks/libraries used in project
-* [![Unity][Unity.com]][Unity-url]
-* [![CSharp][CSharp.com]][CSharp-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -81,35 +78,6 @@ Instructions to setup this project locally.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage examples
-
-Some useful examples of how this project can be used (add screenshots, code examples, demo works, resource links..)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Todo
-
-- [x] Task 1
-- [x] Task 2
-- [ ] Task 3
-    - [ ] Subtask 1
-    - [ ] Subtask 2
-
-See the [open issues](https://github.com/NamPhuThuy/Unity-Initial/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Top contributors:
-
-<a href="https://github.com/NamPhuThuy/Unity-Initial/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=NamPhuThuy/Unity-Initial" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
