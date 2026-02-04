@@ -1348,7 +1348,7 @@
     "m_ObjectId": "5c9278e7c0ca47dcb62ecde3543297ff",
     "m_Title": "Base Color",
     "m_Position": {
-        "x": -500.9998779296875,
+        "x": -501.0,
         "y": -300.0
     }
 }
@@ -2085,8 +2085,8 @@
     "m_ObjectId": "a59a5dd40fca4362a0ff078e887235ea",
     "m_Title": "Diffuse Calculation",
     "m_Position": {
-        "x": -1076.0001220703125,
-        "y": 647.0000610351563
+        "x": -1076.0,
+        "y": 647.0
     }
 }
 
