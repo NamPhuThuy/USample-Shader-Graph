@@ -62,7 +62,12 @@ This is the short description about the project. Technologies, tools be used
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+| Scenario | RenderType | Queue | Why? | 
+| :--- | :--- | :--- | :--- | 
+| Solid Object | "Opaque" | "Geometry" (2000) | Drawn first to write to the depth buffer. Efficient. | 
+| Cutout (Fence/Leaf) | "TransparentCutout" | "AlphaTest" (2450) | Drawn after solids but before true transparency. | 
+| Glass / Ghost | "Transparent" | "Transparent" (3000) | Drawn last (back-to-front) so they blend over solids. | 
+| UI / Overlay | "Overlay" | "Overlay" (4000) | Drawn on top of everything else. |
 
 ### Built With
 

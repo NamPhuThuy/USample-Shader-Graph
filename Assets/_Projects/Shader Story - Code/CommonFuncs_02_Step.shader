@@ -7,7 +7,9 @@ Shader "Custom/CommonFuncs_02_Step"
 
     SubShader
     {
-        Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" }
+        // "Queue" controls the rendering order. Common values: Background, Geometry, AlphaTest, Transparent, Overlay.
+        // "RenderType" categorizes shaders (e.g., Opaque, Transparent) for replacement or post-processing.
+        Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
 
         Pass
         {
