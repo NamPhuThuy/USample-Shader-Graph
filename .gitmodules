@@ -1,3 +1,6 @@
 [submodule "Assets/_Project/UP-Common"]
 	path = Assets/_Project/UP-Common
 	url = https://github.com/NamPhuThuy/UP-Common.git
+[submodule "Assets/_Project/UP-AnimateWithScripts"]
+	path = Assets/_Project/UP-AnimateWithScripts
+	url = https://github.com/NamPhuThuy/UP-AnimateWithScripts.git
