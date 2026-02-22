@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5531014729470599878
+--- !u!114 &-4260827319414184135
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CommonFuncs_04_Smoothstep
-  m_Shader: {fileID: -6465566751694194690, guid: 8f7f97886b670f64995fb0347b510230, type: 3}
+  m_Name: CommonFuncs_05_MinMax
+  m_Shader: {fileID: -6465566751694194690, guid: a32763a5bec82084db68a4d00422d30e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -51,13 +51,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Max: 0
+    - _Min: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StepEdgeEnd: 1
-    - _StepEdgeStart: 0.397
-    m_Colors:
-    - _Tint01: {r: 12, g: 4, b: 1, a: 1}
-    - _Tint01_Color: {r: 0, g: 0, b: 0, a: 1}
-    - _Tint02: {r: 1, g: 4, b: 12, a: 1}
+    - _isShowMax: 1
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
