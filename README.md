@@ -56,9 +56,14 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This is the short description about the project. Technologies, tools be used 
- :smile:
- https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
+Some learning sources:
+- https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
+  - Shader Graph Basics: https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
+  - Shader Code Basics: https://danielilett.com/2025-10-15-tut10-01-your-first-shader/
+  - 10 Shaders Explained Quickly: https://danielilett.com/2023-04-07-tut6-5-10-shaders-quickly/
+  - URP Series: https://danielilett.com/2020-03-21-tut5-1-urp-cel-shading/
+- https://github.com/DeGGeD/ShaderStory
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
