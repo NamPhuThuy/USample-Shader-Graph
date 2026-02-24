@@ -1,61 +1,3 @@
-<a id="readme-top"></a>
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/NamPhuThuy/Unity-Initial">
-    <img src="images/avatar.png" alt="Logo" width="200">
-  </a>
-
-<h3 align="center">README-Template</h3>
-
-  <p align="center">
-    <a href="https://github.com/NamPhuThuy/Unity-Initial">View Demo</a>
-    ·
-    <a href="https://github.com/NamPhuThuy/Unity-Initial/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/NamPhuThuy/Unity-Initial/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage-examples">Usage examples</a></li>
-    <li><a href="#todo">Roadmap</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Some learning sources:
 - https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
   - Shader Graph Basics: https://danielilett.com/2023-09-26-tut7-3-intro-to-shader-graph/
@@ -63,6 +5,10 @@ Some learning sources:
   - 10 Shaders Explained Quickly: https://danielilett.com/2023-04-07-tut6-5-10-shaders-quickly/
   - URP Series: https://danielilett.com/2020-03-21-tut5-1-urp-cel-shading/
 - https://github.com/DeGGeD/ShaderStory
+- https://ameye.dev/
+- https://www.shadertoy.com/
+- https://fragcoord.xyz/
+- https://learn.unity.com/course/introduction-to-lwrp-and-shader-graph-for-2d-games-toolkit-2019-2/tutorial/understanding-scriptable-render-pipelines-2019-3
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -74,69 +20,103 @@ Some learning sources:
 | Glass / Ghost | "Transparent" | "Transparent" (3000) | Drawn last (back-to-front) so they blend over solids. | 
 | UI / Overlay | "Overlay" | "Overlay" (4000) | Drawn on top of everything else. |
 
-### Built With
+
+## Keyword
+**Culling** decides which triangle faces are rendered based on their winding order.
+Triangles have a front and back side determined by vertex order.
+_Cull Back_   → default (don’t draw back faces)
+_Cull Front_  → draw only back faces
+_Cull Off_    → draw both sides
+
+**ZBuffering** (Depth Buffer)
+The ZBuffer stores depth per pixel so GPU knows what is in front.
+Without it:
+- Objects render in draw order
+- Visual artifacts appear
+
+- The value of ZBuffer is determined by _ZTest_
+
+**ZTest**
+Determines when pixel passes depth test.
+- ZTest LEqual (default)
+- ZTest Always
+- ZTest Greater
+
+**ZWrite / Alpha Blending**
+What it does? - Writes object depth into depth buffer
+- ZWrite On   → solid objects (Opaque)
+- ZWrite Off  → transparent objects
+
+**Matrix Manipulations**
+What it is? Matrices convert positions between spaces:
+- Space chain: Object → World → View → Clip → Screen
+
+**Pass**
+A Pass = one full GPU draw of your object with a specific render state + vertex + fragment program.
+- Render State: ZWrite, ZTest, Cull, Blend, ColorMask, Stencil, Offset, AlphaToMask 
+- Inside a SubShader, you can have multiple Passes.
+
+Why multiple Passes? - You need different GPU behaviors:
+- Example: Standard Lit shader needs:
+    - Forward lighting pass 
+    - Shadow caster pass 
+    - Depth-only pass 
+    - Meta pass (lightmapping)
+
+**SubShader**
+A SubShader is a group of passes.
+Unity selects the first SubShader compatible with:
+- Current Render Pipeline 
+- Hardware capability
+
+In modern URP projects: -> You usually only use ONE SubShader.
+
+```hlsl
+SubShader
+{
+    Tags { "RenderPipeline"="UniversalPipeline" }
+
+    Pass
+    {
+        Name "ForwardLit"
+
+        ZWrite On
+        Cull Back
+        Blend One Zero
+
+        HLSLPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        ENDHLSL
+    }
+}
+```
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+**Data Type**
+float
+half
+fixed (legacy)
+int
+bool
+float2 / float3 / float4
+float3x3 / float4x4
+sampler2D
+TEXTURE2D
+SAMPLER
 
-Instructions to setup this project locally.
+_Game tip_:
+- Use half on mobile when possible.
+- Use float for world space math.
 
-### Prerequisites
+**Semantics (GPU Inputs/Outputs)**
+POSITION
+NORMAL
+TANGENT
+TEXCOORD0-7
+SV_POSITION
+SV_Target
+SV_Target0
+SV_Depth
 
-### Installation
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-[![Facebook][facebook-shield]][facebook-url]  
-[![Github][github-shield]][github-url]  
-[![Itch][itch-shield]][itch-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NamPhuThuy/Unity-Initial.svg?style=for-the-badge
-[contributors-url]: https://github.com/NamPhuThuy/Unity-Initial/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NamPhuThuy/Unity-Initial.svg?style=for-the-badge
-[forks-url]: https://github.com/NamPhuThuy/Unity-Initial/network/members
-[stars-shield]: https://img.shields.io/github/stars/NamPhuThuy/Unity-Initial.svg?style=for-the-badge
-[stars-url]: https://github.com/NamPhuThuy/Unity-Initial/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NamPhuThuy/Unity-Initial.svg?style=for-the-badge
-[issues-url]: https://github.com/NamPhuThuy/Unity-Initial/issues
-[license-shield]: https://img.shields.io/github/license/NamPhuThuy/Unity-Initial.svg?style=for-the-badge
-[license-url]: https://github.com/NamPhuThuy/Unity-Initial/blob/main/LICENSE
-
-<!-- Contact -->
-[facebook-shield]: https://img.shields.io/badge/-Facebook-blue.svg?style=for-the-badge&logo=facebook&colorB=3842c6
-[facebook-url]: https://www.facebook.com/namphuthuy957
-[github-shield]: https://img.shields.io/badge/-Github-blue.svg?style=for-the-badge&logo=github&colorB=252525
-[github-url]: https://github.com/NamPhuThuy
-[itch-shield]: https://img.shields.io/badge/-itch.io-blue.svg?style=for-the-badge&logo=itch.io&colorB=f5f5f5
-[itch-url]: https://namphuthuy.itch.io/
-
-
-<!-- Mock Up -->
-[product-screenshot]: images/avatar.png
-
-<!-- Tech Stack -->
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-[Unity.com]: https://img.shields.io/badge/Unity-61DBFB?style=for-the-badge&logo=unity&logoColor=white&labelColor=black&color=black
-[Unity-url]: https://unity.com/
-[CSharp.com]: https://img.shields.io/badge/C%23-61DBFB?style=for-the-badge&logo=c%23&logoColor=white&labelColor=magenta&color=purple
-
-[CSharp-url]: https://learn.microsoft.com/en-us/dotnet/csharp/
+These connect mesh → vertex → fragment.
