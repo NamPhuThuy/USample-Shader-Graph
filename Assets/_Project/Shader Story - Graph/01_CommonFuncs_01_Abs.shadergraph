@@ -71,7 +71,11 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "af2149c612b34ce3a427207c1c2cff56"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -916,7 +920,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.0,
+    "m_Value": 1.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -947,10 +951,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -539.0,
-            "y": 194.00001525878907,
-            "width": 207.99993896484376,
-            "height": 301.99993896484377
+            "x": -560.7999877929688,
+            "y": 194.3999786376953,
+            "width": 207.99996948242188,
+            "height": 301.59991455078127
         }
     },
     "m_Slots": [
@@ -1316,6 +1320,26 @@
     "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "af2149c612b34ce3a427207c1c2cff56",
+    "m_Title": "New Note",
+    "m_Content": "a * (r, g, b)\n(a, 0, 0) * (r, g, b) = (a*r, 0, 0)",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -560.0,
+        "y": 509.60003662109377,
+        "width": 200.0,
+        "height": 273.5999755859375
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
 }
 
 {
@@ -1944,10 +1968,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -836.0000610351563,
-            "y": 289.00006103515627,
-            "width": 208.00006103515626,
-            "height": 313.0
+            "x": -816.0000610351563,
+            "y": 288.800048828125,
+            "width": 208.0,
+            "height": 312.800048828125
         }
     },
     "m_Slots": [
