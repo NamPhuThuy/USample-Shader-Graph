@@ -1,10 +1,10 @@
 ## Giải thích node Multiply
 ![img.png](img.png) 
 
-1: node UV - Trả về UV coordinate của từng pixel trên mesh
-2: node Channel Mask - Lấy một số kênh màu cụ thể (R, G, B, A) từ UV coordinate
-3: float-property mulFactor
-4: node Multiply - Nhân hai giá trị lại với nhau
+1: node UV - Trả về UV coordinate của từng pixel trên mesh  
+2: node Channel Mask - Lấy một số kênh màu cụ thể (R, G, B, A) từ UV coordinate  
+3: float-property mulFactor  
+4: node Multiply - Nhân hai giá trị lại với nhau  
 
 ở Multiply Node:
 - Out = UV * multiFactor
