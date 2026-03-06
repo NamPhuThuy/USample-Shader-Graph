@@ -56,3 +56,14 @@
       - (u chạy từ 0.5 -> 1, v chạy từ 0.5 -> 1)
     - Như vậy ta sẽ có 4 hình vuông có màu từ đen đến vàng  
     <img src="fraction_02.png" alt="A description of the image" width="1000">
+
+## Giải thích node Absolute
+6: node Absolute - Trả về giá trị tuyệt đối của đầu vào
+- Out = abs(frac(UV * multiFactor))
+- Out = (abs(frac(u * multiFactor)), abs(frac(v * multiFactor)))
+
+- Với multiFactor = 2:
+  - u * multiFactor = 0 -> 2 
+  - v * multiFactor = 0 -> 2
+  - Ta sẽ thấy hiển thị vẫn giống với **trường hợp multiFactor = 2** khi chưa gắn thêm node Absolute. Vì giá trị của frac đã nằm trong khoảng 0 -> 1 => giá trị của u & v bằng đúng phần thập phân (chỉ trừ trường hợp giá trị tại 1)  
+  <img src="absolute_01.png" alt="A description of the image" width="1000">
