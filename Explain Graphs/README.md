@@ -95,11 +95,6 @@ Cài đặt Surface Type trong Graph Settings:
 - Out = abs(frac(UV * mulFactor))
 - Out = (abs(frac(u * mulFactor)), abs(frac(v * mulFactor)))
 
-- Với mulFactor = 2:
-  - u * mulFactor = 0 -> 2 
-  - v * mulFactor = 0 -> 2
-  - Ta sẽ thấy hiển thị vẫn giống với **trường hợp mulFactor = 2** khi chưa gắn thêm node Absolute. Vì giá trị của frac đã nằm trong khoảng 0 -> 1 => giá trị của u & v bằng đúng phần thập phân (chỉ trừ trường hợp giá trị tại 1)  
-
 <img src="absolute_01.png" alt="A description of the image" width="1200">
 
 <img src="absolute_02.png" alt="A description of the image" width="1000">
