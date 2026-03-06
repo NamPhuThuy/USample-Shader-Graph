@@ -5,6 +5,10 @@ Khi một chuỗi node được nối vào input Base Color của node Fragment,
 
 Giá trị của BaseColor sẽ được áp dụng cho fragment bằng hệ màu RGB
 
+Cài đặt Surface Type trong Graph Settings:
+- Opaque: màu thu được mặc định có alpha = 1
+- Transparent: màu thu được có giá trị alpha có thể điều chỉnh 
+
 
 ## Giải thích node UV
 
@@ -15,10 +19,10 @@ Giá trị của BaseColor sẽ được áp dụng cho fragment bằng hệ mà
 - Với pixel ở vị trí (1, 1), giá trị trả về là (1, 1)
 - ...
 
-- Với pixel ở vị trí (0, 0), giá trị trả về là (0, 0) -> từ giá trị này ta có màu (0, 0, 0, 0) -> red = 0, green = 0, blue = 0, alpha = 0 -> ta thu được **màu đen**
-- Với pixel ở vị trí (1, 1), giá trị trả về là (1, 1) -> từ giá trị này ta có màu (1, 1, 0, 0) -> red = 1, green = 1, blue = 0, alpha = 0 -> ta thu được **màu vàng**
-- Với pixel ở vị trí (1, 0), giá trị trả về là (1, 0) -> từ giá trị này ta có màu (1, 0, 0, 0) -> red = 1, green = 0, blue = 0, alpha = 0 -> ta thu được **màu đỏ**
-- Với pixel ở vị trí (0, 1), giá trị trả về là (0, 1) -> từ giá trị này ta có màu (0, 1, 0, 0) -> red = 0, green = 1, blue = 0, alpha = 0 -> ta thu được **màu xanh lá**
+- Với pixel ở vị trí (0, 0), giá trị trả về là (0, 0) -> từ giá trị này ta có màu (0, 0, 0) -> red = 0, green = 0, blue = 0 -> ta thu được **màu đen** 
+- Với pixel ở vị trí (1, 1), giá trị trả về là (1, 1) -> từ giá trị này ta có màu (1, 1, 0) -> red = 1, green = 1, blue = 0 -> ta thu được **màu vàng**
+- Với pixel ở vị trí (1, 0), giá trị trả về là (1, 0) -> từ giá trị này ta có màu (1, 0, 0) -> red = 1, green = 0, blue = 0 -> ta thu được **màu đỏ**
+- Với pixel ở vị trí (0, 1), giá trị trả về là (0, 1) -> từ giá trị này ta có màu (0, 1, 0) -> red = 0, green = 1, blue = 0 -> ta thu được **màu xanh lá**
 => Đây cũng chính là 4 màu ở 4 góc của phần preview trên node UV, và cũng sẽ làm 4 màu ở 4 góc của tầm mesh sử dụng shader này 
 
 
@@ -95,4 +99,7 @@ Giá trị của BaseColor sẽ được áp dụng cho fragment bằng hệ mà
   - u * mulFactor = 0 -> 2 
   - v * mulFactor = 0 -> 2
   - Ta sẽ thấy hiển thị vẫn giống với **trường hợp mulFactor = 2** khi chưa gắn thêm node Absolute. Vì giá trị của frac đã nằm trong khoảng 0 -> 1 => giá trị của u & v bằng đúng phần thập phân (chỉ trừ trường hợp giá trị tại 1)  
-  <img src="absolute_01.png" alt="A description of the image" width="800">
+
+<img src="absolute_01.png" alt="A description of the image" width="1200">
+
+<img src="absolute_02.png" alt="A description of the image" width="1000">
