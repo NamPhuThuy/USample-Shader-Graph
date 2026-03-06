@@ -38,9 +38,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _EdgeValue: 0.457
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Step: 1
+    - _Step: 0.461
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

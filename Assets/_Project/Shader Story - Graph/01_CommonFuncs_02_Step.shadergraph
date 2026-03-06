@@ -164,8 +164,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 0.0
+            "x": 30.000038146972658,
+            "y": -85.0
         },
         "m_Blocks": [
             {
@@ -181,8 +181,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 0.0,
-            "y": 200.0
+            "x": 30.000038146972658,
+            "y": 114.99998474121094
         },
         "m_Blocks": [
             {
@@ -250,7 +250,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "0803cc60f6224096b3fdb45194998445",
     "m_Id": 0,
-    "m_DisplayName": "Step",
+    "m_DisplayName": "EdgeValue",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -687,10 +687,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "Step",
+    "m_Name": "EdgeValue",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Step",
-    "m_DefaultReferenceName": "_Step",
+    "m_RefNameGeneratedByDisplayName": "EdgeValue",
+    "m_DefaultReferenceName": "_EdgeValue",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -702,7 +702,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.0,
+    "m_Value": 0.6800000071525574,
     "m_FloatType": 1,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -733,10 +733,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -947.9999389648438,
-            "y": -77.59999084472656,
-            "width": 99.20001220703125,
-            "height": 33.60000228881836
+            "x": -929.0,
+            "y": -119.0,
+            "width": 137.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -769,10 +769,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -212.00006103515626,
-            "y": 51.19997787475586,
-            "width": 131.20005798339845,
-            "height": 148.80001831054688
+            "x": -260.0,
+            "y": 0.0,
+            "width": 138.0,
+            "height": 149.0
         }
     },
     "m_Slots": [

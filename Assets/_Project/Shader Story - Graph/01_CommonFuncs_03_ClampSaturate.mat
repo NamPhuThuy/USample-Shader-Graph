@@ -53,8 +53,8 @@ Material:
     m_Floats:
     - _Clamp_Max: 0.9
     - _Clamp_Min: 0.1
-    - _Glow_Falloff: 0.278
-    - _Glow_Radius: 0.273
+    - _Glow_Falloff: 0.26
+    - _Glow_Radius: 0.26
     - _QueueControl: 0
     - _QueueOffset: 0
     - _isUseClamp: 1
